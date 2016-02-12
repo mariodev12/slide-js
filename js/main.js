@@ -1,10 +1,9 @@
 (function(){
-  var slideshow = document.getElementsByClassName('slideshow')[0];
-  console.log(slideshow);
-  var counter = 0;
-  var slides = slideshow.getElementsByTagName('li');
-  var next = document.getElementsByClassName('next')[0];
-  var back = document.getElementsByClassName('back')[0];
+  var slideshow = document.getElementsByClassName('slideshow')[0],
+  counter = 0,
+  slides = slideshow.getElementsByTagName('li'),
+  next = document.getElementsByClassName('next')[0],
+  back = document.getElementsByClassName('back')[0];
 
   function showImage(counter){
     for (var i = 0; i < slides.length; i++) {
@@ -29,4 +28,4 @@
     showImage(counter);
   });
   showImage(counter);
-})();
+});
