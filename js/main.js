@@ -1,6 +1,6 @@
 (function(){
+  var counter = 0;
   var slideshow = document.getElementsByClassName('slideshow')[0],
-  counter = 0,
   slides = slideshow.getElementsByTagName('li'),
   next = document.getElementsByClassName('next')[0],
   back = document.getElementsByClassName('back')[0];
