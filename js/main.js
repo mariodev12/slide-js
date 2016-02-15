@@ -1,31 +1,31 @@
 (function(){
-  var counter = 0;
+  var cnt = 0;
   var slideshow = document.getElementsByClassName('slideshow')[0],
   slides = slideshow.getElementsByTagName('li'),
   next = document.getElementsByClassName('next')[0],
   back = document.getElementsByClassName('back')[0];
 
-  function showImage(counter){
+  function showImage(cnt){
     for (var i = 0; i < slides.length; i++) {
       slides[i].className = 'hide-slide';
     }
-    slides[counter].className = 'show-slide';
+    slides[cnt].className = 'show-slide';
   }
   next.addEventListener('click', function(){
-    if(counter < slides.length-1){
-      counter++
+    if(cnt < slides.length-1){
+      cnt++
     } else {
-      counter = 0;
+      cnt = 0;
     }
-    showImage(counter);
+    showImage(cnt);
   });
   back.addEventListener('click', function(){
-    if(counter > 0){
-      counter--;
+    if(cnt > 0){
+      cnt--;
     } else {
-      counter = slides.length-1;
+      cnt = slides.length-1;
     }
-    showImage(counter);
+    showImage(cnt);
   });
-  showImage(counter);
+  showImage(cnt);
 })();
